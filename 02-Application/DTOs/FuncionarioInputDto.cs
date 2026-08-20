@@ -1,11 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace _04_Domain.Entities
+namespace _02_Application.DTOs
 {
-    public class Funcionario
+    public class FuncionarioInputDto
     {
-        public int Id { get; set; }
-
         [Required(ErrorMessage = "O nome é obrigatório")]
         public string Nome { get; set; } = string.Empty;
 
@@ -17,7 +15,5 @@ namespace _04_Domain.Entities
 
         [Required(ErrorMessage = "O departamento é obrigatório")]
         public string Departamento { get; set; } = string.Empty;
-
-        public bool Ativo { get; set; } = true;
     }
 }
